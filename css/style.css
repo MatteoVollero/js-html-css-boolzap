@@ -9,6 +9,10 @@
   justify-content: space-between;
 }
 
+.relative{
+  position: relative;
+}
+
 .body-color{
   background-color: #d8dbd5;
   height: 100vh;
@@ -79,10 +83,12 @@ i{
 
 .notifiche-desktop{
   padding: 15px;
+  overflow: auto;
 }
 
 .notifiche-desktop .circle{
   background-color: white;
+  float: left;
 }
 
 .fa-bell-slash{
@@ -95,4 +101,53 @@ i{
   color: #8edafc;
 
   padding: 10px;
+}
+
+.notifiche-desktop-message{
+  width: calc(100% - 100px);
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%,-50%);
+}
+
+.notifiche-desktop-message h5{
+  color: #131d22;
+}
+
+.notifiche-desktop-message a h5{
+  color: #6293aa;
+}
+
+.notifiche-desktop-message a{
+  text-decoration-color: #4f7485;
+}
+
+.friend-box{
+  overflow: auto;
+  height: calc(100% - 70px - 80px - 27px);
+}
+
+.friend{
+  position: relative;
+  padding: 15px;
+  background-color: #ffffff;
+}
+
+.friend:hover{
+  background-color: #e9ebeb;
+}
+
+.friend-info{
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%,-50%);
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.friend-info h6{
+  color: #b8bbbd;
 }
