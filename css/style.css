@@ -7,6 +7,7 @@
 .flex{
   display: flex;
   justify-content: space-between;
+  flex-shrink: 1;
 }
 
 .relative{
@@ -49,6 +50,9 @@
   width: 65%;
   height: 100%;
   background-color: green;/*DEBUG*/
+  background-image: url(../img/mine.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .owner{
@@ -183,4 +187,43 @@ input::placeholder{
 
 .friend-info h6{
   color: #b8bbbd;
+}
+
+.selected{
+  padding: 10px;
+  height: 70px;
+  background-color:#eaeaea;
+}
+
+.selected-name{
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 10px;
+}
+
+.messages{
+  padding: 40px;
+  height: calc(100% - 50px);
+  justify-content: space-between;
+}
+
+.owner-space{
+  margin-left: calc(100% - 15px - 100px);
+}
+
+.owner-message{
+  padding: 3px;
+  width: 100px;
+  height: 50px;
+  border-radius: 90px;
+  background-color: #d5f9ba;
+  justify-content: end;
+  align-items: end;
+}
+
+.friend-message{
+  width: 100px;
+  height: 50px;
+  border-radius: 90px;
+  background-color: #ffffff;
 }
