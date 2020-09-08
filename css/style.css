@@ -32,7 +32,6 @@
 .central-container{
   width: 1200px;
   height: 90vh;
-  background-color: red; /*DEBUG*/
 
   position: absolute;
   top: 50%;
@@ -44,7 +43,6 @@
 .left-side{
   width: 35%;
   height: 100%;
-  background-color: blue;/*DEBUG*/
 }
 
 .right-side{
@@ -123,9 +121,44 @@ i{
   text-decoration-color: #4f7485;
 }
 
+.search-bar{
+  color: #fafafa;
+  padding: 10px;
+  background-color: white;
+}
+
+.search-box .box-1 , .search-box .box-2{
+  border: 1px solid #fafafa;
+}
+
+.box-1{
+  text-align: center;
+  width: 10%;
+}
+
+.box-2{
+  width: 90%;
+}
+
+input{
+  width: 90%;
+  height: 30px;
+  border-radius: 0px;
+  border: 1px solid white;
+}
+
+input::placeholder{
+  margin-left: 5px;
+}
+
+.fa-search{
+  color: #b9bcbe;
+  line-height: 30px;
+}
+
 .friend-box{
   overflow: auto;
-  height: calc(100% - 70px - 80px - 27px);
+  height: calc(100% - 70px - 80px - 27px - 24px);
 }
 
 .friend{
