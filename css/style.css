@@ -202,7 +202,7 @@ input::placeholder{
 }
 
 .messages{
-  padding: 40px;
+  padding: 20px;
   height: calc(100% - 50px);
   justify-content: space-between;
 }
@@ -212,18 +212,35 @@ input::placeholder{
 }
 
 .owner-message{
-  padding: 3px;
-  width: 100px;
-  height: 50px;
-  border-radius: 90px;
   background-color: #d5f9ba;
   justify-content: end;
   align-items: end;
 }
 
 .friend-message{
-  width: 100px;
-  height: 50px;
-  border-radius: 90px;
   background-color: #ffffff;
+}
+
+.scrittura{
+  height: 70px;
+  width: calc(100% - 420px);
+  margin-left: 420px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: #f3eeea;
+
+  padding: 15px;
+}
+
+.chat-window{
+  padding: 5px;
+  border-radius: 10px;
+
+  height: calc(100% - 140px);
+  overflow-y: scroll;
 }
