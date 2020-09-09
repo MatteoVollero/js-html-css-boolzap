@@ -201,26 +201,6 @@ input::placeholder{
   margin-left: 10px;
 }
 
-.messages{
-  padding: 20px;
-  height: calc(100% - 50px);
-  justify-content: space-between;
-}
-
-.owner-space{
-  margin-left: calc(100% - 15px - 100px);
-}
-
-.owner-message{
-  background-color: #d5f9ba;
-  justify-content: end;
-  align-items: end;
-}
-
-.friend-message{
-  background-color: #ffffff;
-}
-
 .scrittura{
   height: 70px;
   width: calc(100% - 420px);
@@ -238,9 +218,61 @@ input::placeholder{
 }
 
 .chat-window{
-  padding: 5px;
-  border-radius: 10px;
+  padding: 15px;
+  font-size: 12px;
 
   height: calc(100% - 140px);
   overflow-y: scroll;
+}
+
+.message-time{
+  bottom: 0;
+  right: 0;
+}
+
+.sent{
+  background-color: #d5f9ba;
+}
+
+.received{
+  background-color: #fff;
+}
+
+.sinistra{
+  justify-content: flex-start;
+}
+
+.destra{
+  /* margin-left: calc(100% - 300px - 15px); */
+  justify-content: flex-end;
+}
+
+.message{
+  display: inline-block;
+  position: relative;
+  min-width: 100px;
+  max-width: 300px;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.message-row{
+  display: flex;
+}
+
+.chat{
+  min-height: 50px;
+}
+
+.message-time{
+  font-size: 10px;
+  position: absolute;
+  bottom: 0;
+  right: 5px;
+
+  overflow: auto;
+}
+
+.container-flex{
+  display: flex;
 }
