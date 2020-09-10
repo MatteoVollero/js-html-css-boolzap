@@ -44,6 +44,7 @@
 .left-side{
   width: 35%;
   height: 100%;
+  background-color: #fff;
 }
 
 .right-side{
@@ -218,11 +219,16 @@ input::placeholder{
 }
 
 .chat-window{
+  display: none;
   padding: 15px;
   font-size: 12px;
 
   height: calc(100% - 140px);
   overflow-y: scroll;
+}
+
+.active{
+  display: block;
 }
 
 .message-time{
@@ -256,6 +262,17 @@ input::placeholder{
   padding: 15px;
 }
 
+.fa-angle-down{
+  display: none;
+  position: absolute;
+  top: 35%;
+  right: -6px;
+}
+
+.message:hover .fa-angle-down{
+  display: block;
+}
+
 .message-row{
   display: flex;
 }
@@ -275,4 +292,43 @@ input::placeholder{
 
 .container-flex{
   display: flex;
+}
+
+.option{
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 2%;
+  padding: 15px;
+  background-color: #fff;
+}
+
+#receiver .option{
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 2%;
+  padding: 15px;
+  background-color: #fff;
+  z-index: 1;
+}
+
+.option ul li{
+  list-style: none;
+  color: #000;
+  font-size: 12px;
+  white-space: nowrap;
+  margin-top: 5px;
+}
+
+.option ul li:nth-child(2){
+  margin-top: 10px;
+}
+
+.option ul li:hover{
+  color: lightgrey;
+}
+
+.hide{
+  display: none;
 }

@@ -10,7 +10,7 @@ $(document).ready(function(){
        messaggio.find(".message-time").text("12:00");
        messaggio.addClass("destra");
 
-       $(".chat-window").append(messaggio);
+       $(".active").append(messaggio);
        $("#messaggio").val("");
        written = true;
       }
@@ -24,8 +24,10 @@ $(document).ready(function(){
        messaggio.find(".message-text").text(testo);
        messaggio.find(".message-time").text("12:00");
        messaggio.addClass("destra");
-
-       $(".chat-window").append(messaggio);
+       if(messaggio.hasClass("hide")){
+         messaggio.removeClass("hide");
+       }
+       $(".active").append(messaggio);
        $("#messaggio").val("");
        written = true;
       }
@@ -39,7 +41,7 @@ $(document).ready(function(){
       messaggio.find(".message-time").text("12:00");
       messaggio.addClass("sinistra")
 
-      $(".chat-window").append(messaggio);
+      $(".active").append(messaggio);
       written = false;
     }
   }, 500);
@@ -58,6 +60,30 @@ $(document).ready(function(){
         $(this).parent().parent().hide();
       }
     });
+  });
+
+  function topChanger(index){}
+
+  $(".friend").click(function(){
+    var closingWindow = $(".active");
+    var selector = '.chat-window[data-friend="' + $(this).data("friend") + '"]';
+    var openingWindow = $(selector);
+
+
+    topChanger($(this).data("friend"));
+
+    closingWindow.removeClass("active");
+    openingWindow.addClass("active");
+
+  });
+
+  $(".fa-angle-down").click(function(){
+    $(this).parent().children(".option").toggle();
+  });
+
+  $(".option ul li:nth-child(2)").click(function(){
+    $(this).parent().parent().parent().parent().addClass("hide");
+    $(this).parent().parent().hide();
   });
 
 });
