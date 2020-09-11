@@ -30,6 +30,7 @@ $(document).ready(function(){
        $(".active").append(messaggio);
        $("#messaggio").val("");
        written = true;
+       $(".active").scrollTop(227);
       }
   });
 
@@ -43,6 +44,7 @@ $(document).ready(function(){
 
       $(".active").append(messaggio);
       written = false;
+      $(".active").scrollTop(227);
     }
   }, 500);
 
