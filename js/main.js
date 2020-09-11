@@ -62,28 +62,36 @@ $(document).ready(function(){
     });
   });
 
-  function topChanger(index){}
-
   $(".friend").click(function(){
     var closingWindow = $(".active");
     var selector = '.chat-window[data-friend="' + $(this).data("friend") + '"]';
     var openingWindow = $(selector);
 
+    var newImg = $(this).find("img").attr("src");
+    var newName = $(this).find(".nome").text();
 
-    topChanger($(this).data("friend"));
-
+    $(".selected-info").find("img").attr("src",newImg);
+    $(".selected-info").find("h5").text(newName);
     closingWindow.removeClass("active");
     openingWindow.addClass("active");
 
   });
 
-  $(".fa-angle-down").click(function(){
-    $(this).parent().children(".option").toggle();
-  });
+  $(document).on("click",".fa-angle-down",
+    function(){
+      console.log("cliccato");
+      $(this).parent().children(".option").toggle();
+    });
 
-  $(".option ul li:nth-child(2)").click(function(){
-    $(this).parent().parent().parent().parent().addClass("hide");
-    $(this).parent().parent().hide();
-  });
+  $(document).on("click",".option ul li:nth-child(2)",
+    function(){
+      $(this).parent().parent().parent().parent().remove();
+      $(this).parent().parent().hide();
+    });
+
+  // $(".option ul li:nth-child(2)").click(function(){
+  //   $(this).parent().parent().parent().parent().addClass("hide");
+  //   $(this).parent().parent().hide();
+  // });
 
 });

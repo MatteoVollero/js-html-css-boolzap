@@ -275,6 +275,7 @@ input::placeholder{
 
 .message-row{
   display: flex;
+  margin-top: 15px
 }
 
 .chat{
@@ -297,10 +298,12 @@ input::placeholder{
 .option{
   display: none;
   position: absolute;
+  width: 150px;
   top: 100%;
   right: 2%;
   padding: 15px;
   background-color: #fff;
+  z-index: 1;
 }
 
 #receiver .option{
