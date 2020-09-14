@@ -14,7 +14,9 @@
 <body>
 <!-- Div per dare il colore di background -->
 <div class="body-color">
+  <!-- Riquadro iniziale -->
   <div class="central-container flex">
+    <!-- parte di sinistra -->
     <div class="left-side">
       <div class="owner flex">
         <img class="circle" src="img/avatar_io.jpg" alt="">
@@ -116,7 +118,9 @@
 
       </div>
     </div>
-    <!-- Insnerire un conotainer più interno con relative altrimenti ti sballi lo scroll -->
+    <!-- /parte di sinistra -->
+
+    <!-- Parte di destra -->
     <div class="right-side">
       <div class="selected flex">
         <div class="profile">
@@ -125,7 +129,7 @@
 
             <div class="selected-name flex">
               <h4>Michele</h4>
-              <h6>Ultimo accesso alle ore 16:54</h6>
+              <h6>Ultimo accesso alle ore <span class="orario"></span> </h6>
             </div>
           </div>
         </div>
@@ -171,6 +175,7 @@
       </div>
 
 
+      <!-- Tutte le chat che sono state inserite  -->
       <div class="chat-window" data-friend="1">
 
                 <div id="sender"  class="message-row destra">
@@ -297,6 +302,7 @@
               </div>
           </div>
       </div>
+      <!-- /Tutte le chat che sono state inserite  -->
 
         <div class="scrittura flex">
           <i class="far fa-smile"></i>
@@ -304,12 +310,14 @@
           <i class="fab fa-telegram-plane"></i>
         </div>
     </div>
-
+    <!-- /Parte di destra -->
   </div>
+  <!-- /Riquadro iniziale -->
   <div class="top-color">
     <!-- Div per dare il colore verde al top -->
   </div>
 </div>
+<!-- /Div per dare il colore di background -->
 
 
 <script type="text/javascript" src="js/main.js"></script>
