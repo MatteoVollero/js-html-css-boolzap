@@ -12,6 +12,7 @@ $(document).ready(function(){
 
        $(".active").append(messaggio);
        $("#messaggio").val("");
+       $(".active").scrollTop(227);
        written = true;
       }
   });
@@ -83,6 +84,8 @@ $(document).ready(function(){
     function(){
       console.log("cliccato");
       $(this).parent().children(".option").toggle();
+      $(".active").scrollTop(100);
+
     });
 
   $(document).on("click",".option ul li:nth-child(2)",
@@ -91,9 +94,5 @@ $(document).ready(function(){
       $(this).parent().parent().hide();
     });
 
-  // $(".option ul li:nth-child(2)").click(function(){
-  //   $(this).parent().parent().parent().parent().addClass("hide");
-  //   $(this).parent().parent().hide();
-  // });
 
 });

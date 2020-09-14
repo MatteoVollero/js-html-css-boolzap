@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body{
+  font-family: 'Roboto', sans-serif;
+}
+
 .flex{
   display: flex;
   justify-content: space-between;
@@ -150,6 +154,7 @@ input{
   height: 30px;
   border-radius: 0px;
   border: 1px solid white;
+  padding: 15px;
 }
 
 input::placeholder{
@@ -173,6 +178,7 @@ input::placeholder{
 }
 
 .friend:hover{
+  cursor: pointer;
   background-color: #e9ebeb;
 }
 
@@ -254,9 +260,9 @@ input::placeholder{
 }
 
 .message{
+  text-align: center;
   display: inline-block;
   position: relative;
-  min-width: 100px;
   max-width: 300px;
   border-radius: 10px;
   padding: 15px;
@@ -270,6 +276,7 @@ input::placeholder{
 }
 
 .message:hover .fa-angle-down{
+  cursor: pointer;
   display: block;
 }
 
